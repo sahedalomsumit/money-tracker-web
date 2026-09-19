@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" width="512" height="512">
+  <defs>
+    <linearGradient id="emeraldGradient" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#6AB9A4" />
+      <stop offset="50%" stop-color="#3C9C81" />
+      <stop offset="100%" stop-color="#086B57" />
+    </linearGradient>
+  </defs>
+  <rect width="108" height="108" fill="url(#emeraldGradient)" />
+  <g fill="#FDFBF7">
+    <!-- Bar 1 (Left - Ascending) -->
+    <path d="M35,55 C35,53.895 35.895,53 37,53 L42,53 C43.105,53 44,53.895 44,55 L44,71 C44,71.552 43.552,72 43,72 L36,72 C35.448,72 35,71.552 35,71 Z" />
+    <!-- Bar 2 (Middle - Ascending) -->
+    <path d="M50,45 C50,43.895 50.895,43 52,43 L57,43 C58.105,43 59,43.895 59,45 L59,71 C59,71.552 58.552,72 58,72 L51,72 C50.448,72 50,71.552 50,71 Z" />
+    <!-- Bar 3 (Right - Highest) -->
+    <path d="M65,35 C65,33.895 65.895,33 67,33 L72,33 C73.105,33 74,33.895 74,35 L74,71 C74,71.552 73.552,72 73,72 L66,72 C65.448,72 65,71.552 65,71 Z" />
+  </g>
+</svg>
