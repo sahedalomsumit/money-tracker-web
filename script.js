@@ -165,25 +165,28 @@ revealElements.forEach(el => {
 const darkBtn = document.getElementById('dark-mode-btn');
 const lightBtn = document.getElementById('light-mode-btn');
 const toggleIndicator = document.getElementById('toggle-indicator');
-const screenshotImages = document.querySelectorAll('.screenshot-img');
 
 if (darkBtn && lightBtn) {
   const darkScreenshots = [
-    'img/salah tracker app - screenshot (1).jpeg',
-    'img/salah tracker app - screenshot (2).jpeg',
-    'img/salah tracker app - screenshot (3).jpeg',
-    'img/salah tracker app - screenshot (4).jpeg',
-    'img/salah tracker app - screenshot (5).jpeg',
-    'img/salah tracker app - screenshot (6).jpeg'
+    'img/money-tracker-app-dark-ss (1).jpg',
+    'img/money-tracker-app-dark-ss (2).jpg',
+    'img/money-tracker-app-dark-ss (3).jpg',
+    'img/money-tracker-app-dark-ss (4).jpg',
+    'img/money-tracker-app-dark-ss (5).jpg',
+    'img/money-tracker-app-dark-ss (6).jpg',
+    'img/money-tracker-app-dark-ss (7).jpg',
+    'img/money-tracker-app-dark-ss (8).jpg'
   ];
 
   const lightScreenshots = [
-    'img/salah tracker app - light - screenshot (1).jpeg',
-    'img/salah tracker app - light - screenshot (2).jpeg',
-    'img/salah tracker app - light - screenshot (3).jpeg',
-    'img/salah tracker app - light - screenshot (4).jpeg',
-    'img/salah tracker app - light - screenshot (5).jpeg',
-    'img/salah tracker app - light - screenshot (6).jpeg'
+    'img/money-tracker-app-light-ss (1).jpg',
+    'img/money-tracker-app-light-ss (2).jpg',
+    'img/money-tracker-app-light-ss (3).jpg',
+    'img/money-tracker-app-light-ss (4).jpg',
+    'img/money-tracker-app-light-ss (5).jpg',
+    'img/money-tracker-app-light-ss (6).jpg',
+    'img/money-tracker-app-light-ss (7).jpg',
+    'img/money-tracker-app-light-ss (8).jpg'
   ];
 
   darkBtn.addEventListener('click', () => {
@@ -194,11 +197,11 @@ if (darkBtn && lightBtn) {
     lightBtn.classList.remove('text-white');
     lightBtn.classList.add('text-gray-500');
     
+    const screenshotImages = document.querySelectorAll('.screenshot-img');
     screenshotImages.forEach((img, i) => {
-      img.src = darkScreenshots[i];
-      img.style.animation = 'none';
-      img.offsetHeight; // trigger reflow
-      img.style.animation = null;
+      if (darkScreenshots[i]) {
+        img.src = darkScreenshots[i];
+      }
     });
   });
 
@@ -210,11 +213,11 @@ if (darkBtn && lightBtn) {
     darkBtn.classList.remove('text-white');
     darkBtn.classList.add('text-gray-500');
     
+    const screenshotImages = document.querySelectorAll('.screenshot-img');
     screenshotImages.forEach((img, i) => {
-      img.src = lightScreenshots[i];
-      img.style.animation = 'none';
-      img.offsetHeight; // trigger reflow
-      img.style.animation = null;
+      if (lightScreenshots[i]) {
+        img.src = lightScreenshots[i];
+      }
     });
   });
 }
