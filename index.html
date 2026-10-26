@@ -3,18 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Money Tracker App – 100% Ad-Free Income & Allocation Tracker</title>
+    <title>Money Tracker App – Modern Income, Expense & Allocation Manager</title>
     <meta
       name="description"
-      content="Track money, log income, and see your breakdown and savings grow over time without ads. A modern, ad-free Android app built with Jetpack Compose & Firebase."
+      content="Track income, manage expenses, and grow your savings over time. A modern, privacy-respecting Android application built with Jetpack Compose & Firebase."
     />
-    <link rel="icon" type="image/png" href="img/app_icon_rounded.png" />
+    <link rel="icon" type="image/png" href="img/Favicon.png" />
+    <link rel="apple-touch-icon" href="img/app_icon_rounded.png" />
+
+    <!-- Open Graph & Meta -->
+    <meta property="og:title" content="Money Tracker App – Income & Expense Manager" />
+    <meta property="og:description" content="Track income, manage expenses, and grow your savings over time. Built with Jetpack Compose & Firebase." />
+    <meta property="og:image" content="img/google_play_feature_graphic_1024x500.png" />
+    <meta property="og:type" content="website" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=JetBrains+Mono:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@400;500;700&family=Montserrat:wght@400;600;700;800;900&display=swap"
       rel="stylesheet"
     />
 
@@ -35,13 +42,21 @@
     <div
       class="w-full bg-[#080808] py-3 px-4 flex flex-col md:flex-row justify-center items-center tech-label border-b border-white/5 z-[60] relative"
     >
-      <div class="flex items-center gap-3 text-emerald-500">
+      <div class="flex items-center gap-3 text-emerald-400">
         <div class="pulse-dot"></div>
         <span class="text-white">SYSTEM_STATUS:</span>
-        OPEN FOR COLLABORATIONS
+        v2.1.1 STABLE RELEASE LIVE
       </div>
       <span class="text-white/10 mx-6 hidden md:block">|</span>
       <div class="flex gap-6 mt-2 md:mt-0">
+        <a
+          href="https://play.google.com/store/apps/details?id=com.sahed.money_tracker"
+          class="text-gray-400 hover:text-white transition-colors"
+          target="_blank"
+          rel="noopener noreferrer"
+          >GOOGLE_PLAY_STORE »</a
+        >
+        <span class="text-white/10">/</span>
         <a
           href="https://wa.me/+358415765539"
           class="text-gray-400 hover:text-white transition-colors"
@@ -64,15 +79,15 @@
         >
           <img
             class="sas-logo transition-transform group-hover:scale-105 w-32"
-            src="img/logo-sahed-alom-sumit.png"
+            src="img/Logo.png"
             alt="Sahed Alom Sumit Official Logo"
           />
           <div class="hidden md:block h-6 w-[1px] bg-white/10 mx-6"></div>
           <div
             class="hidden lg:block font-mono text-[9px] text-gray-500 uppercase tracking-tighter leading-tight"
           >
-            Designer & Developer<br />
-            <span class="text-emerald-500 italic">Availability: High</span>
+            Money Tracker App<br />
+            <span class="text-emerald-500 italic">Version: 2.1.1</span>
           </div>
         </a>
 
@@ -93,6 +108,15 @@
             class="tech-label font-bold text-white hover:text-emerald-400 border-b border-transparent hover:border-emerald-500/50 pb-1 transition-all"
             >./DATA_DELETION</a
           >
+          <a
+            href="https://github.com/sahedalomsumit/money-tracker-app"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="tech-label font-bold text-gray-400 hover:text-white border-b border-transparent hover:border-white/50 pb-1 transition-all flex items-center gap-1.5"
+          >
+            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
+            ./GITHUB
+          </a>
         </nav>
 
         <!-- Mobile Hamburger Button -->
@@ -144,376 +168,603 @@
             >DATA_DELETION</span
           >
         </a>
+        <a href="https://play.google.com/store/apps/details?id=com.sahed.money_tracker" target="_blank" rel="noopener noreferrer" class="group flex items-baseline gap-4">
+          <span class="font-mono text-emerald-500 text-xs">04_</span>
+          <span
+            class="text-4xl font-black tracking-tighter uppercase transition-colors text-emerald-400 group-hover:text-white"
+            >PLAY_STORE</span
+          >
+        </a>
       </div>
     </div>
 
     <!-- Main Content -->
     <main>
       <!-- Hero Section -->
-      <section class="pt-40 pb-32 px-6 max-w-7xl mx-auto min-h-screen">
+      <section class="pt-32 md:pt-40 pb-28 px-6 max-w-7xl mx-auto min-h-screen flex flex-col justify-center">
         <div
-          class="reveal mb-24 text-center flex flex-col items-center justify-center"
+          class="reveal mb-20 text-center flex flex-col items-center justify-center"
         >
-          <div class="flex justify-center mb-10">
+          <!-- App Icon with Ambient Emerald Glow -->
+          <div class="flex justify-center mb-8">
             <div class="relative group">
-              <div class="absolute -inset-1 bg-emerald-500/30 rounded-[2.2rem] blur-xl group-hover:bg-emerald-500/50 transition duration-1000 group-hover:duration-200"></div>
+              <div class="absolute -inset-2 bg-emerald-500/30 rounded-[2.5rem] blur-2xl group-hover:bg-emerald-500/50 transition duration-1000 group-hover:duration-200"></div>
               <img
                 src="img/app_icon_rounded.png"
                 alt="Money Tracker App Icon"
-                class="relative w-24 h-24 md:w-32 md:h-32 rounded-[2rem] shadow-2xl"
+                class="relative w-28 h-28 md:w-36 md:h-36 rounded-[2.2rem] shadow-2xl border border-white/10"
               />
             </div>
           </div>
 
+          <!-- Feature Pills -->
+          <div class="flex flex-wrap items-center justify-center gap-2.5 mb-8">
+            <span class="skill-tag text-emerald-400 border-emerald-500/30 bg-emerald-500/10 font-bold">
+              v2.1.1 RELEASE
+            </span>
+            <span class="skill-tag text-gray-300 border-white/10 bg-white/5">
+              ANDROID 8.0+ (API 26–36)
+            </span>
+            <span class="skill-tag text-emerald-300 border-emerald-500/20 bg-emerald-500/5">
+              KOTLIN & JETPACK COMPOSE
+            </span>
+            <span class="skill-tag text-sky-300 border-sky-500/20 bg-sky-500/5">
+              OFFLINE PERSISTENCE
+            </span>
+          </div>
+
           <h1
-            class="text-6xl md:text-8xl heading-bold text-white leading-[0.9] mb-8"
+            class="text-5xl md:text-7xl lg:text-8xl heading-bold text-white leading-[0.95] mb-8"
           >
             Money Tracker <span class="text-emerald-500">App</span>
           </h1>
-          <p class="max-w-3xl text-gray-400 text-xl font-light leading-relaxed mb-12">
-            Track money, log income, and see your breakdown and savings grow over time.
-            <strong class="text-white">Money Tracker App</strong> is a modern,
-            <span class="skill-tag text-emerald-500 border-emerald-500/20 bg-emerald-500/5 mx-2">100%_AD_FREE</span>
-            and privacy-first Android application built with Jetpack Compose and Firebase to give you complete financial peace of mind.
+          <p class="text-xl md:text-2xl text-emerald-400/90 font-medium tracking-tight mb-6">
+            Track income, manage expenses, and grow your savings over time.
+          </p>
+          <p class="max-w-3xl text-gray-400 text-lg md:text-xl font-light leading-relaxed mb-12">
+            A modern, privacy-respecting Android application built with <strong class="text-white">Jetpack Compose</strong> and <strong class="text-white">Cloud Firestore</strong>. Log income and expense records side by side in seconds, evaluate inline math expressions, split earnings across dynamic allocation buckets, and visualize your financial growth with interactive 12-month analytics.
           </p>
 
-          <div class="flex flex-wrap justify-center gap-6">
+          <!-- Action Button -->
+          <div class="flex justify-center items-center w-full">
             <a
               href="https://play.google.com/store/apps/details?id=com.sahed.money_tracker"
               target="_blank"
               rel="noreferrer"
-              class="cta-primary cta-large"
+              class="cta-primary !py-4 !px-8 text-sm !border-emerald-500/40 hover:!border-emerald-400 bg-emerald-500/10 hover:bg-emerald-500/20 shadow-lg shadow-emerald-500/10 inline-flex items-center gap-3"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 466 511.98" width="24" height="24">
-               <g id="Layer_x0020_1">
-                <path fill="#EA4335" fill-rule="nonzero" d="M199.9 237.8l-198.5 232.37c7.22,24.57 30.16,41.81 55.8,41.81 11.16,0 20.93,-2.79 29.3,-8.37l0 0 244.16 -139.46 -130.76 -126.35z"/>
-                <path fill="#FBBC04" fill-rule="nonzero" d="M433.91 205.1l0 0 -104.65 -60 -111.61 110.22 113.01 108.83 104.64 -58.6c18.14,-9.77 30.7,-29.3 30.7,-50.23 -1.4,-20.93 -13.95,-40.46 -32.09,-50.22z"/>
-                <path fill="#34A853" fill-rule="nonzero" d="M199.42 273.45l129.85 -128.35 -241.37 -136.73c-8.37,-5.58 -19.54,-8.37 -30.7,-8.37 -26.5,0 -50.22,18.14 -55.8,41.86 0,0 0,0 0,0l198.02 231.59z"/>
-                <path fill="#4285F4" fill-rule="nonzero" d="M1.39 41.86c-1.39,4.18 -1.39,9.77 -1.39,15.34l0 397.64c0,5.57 0,9.76 1.4,15.34l216.27 -214.86 -216.28 -213.46z"/>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 466 511.98" class="w-5 h-5 flex-shrink-0">
+               <g>
+                <path fill="#EA4335" d="M199.9 237.8l-198.5 232.37c7.22,24.57 30.16,41.81 55.8,41.81 11.16,0 20.93,-2.79 29.3,-8.37l0 0 244.16 -139.46 -130.76 -126.35z"/>
+                <path fill="#FBBC04" d="M433.91 205.1l0 0 -104.65 -60 -111.61 110.22 113.01 108.83 104.64 -58.6c18.14,-9.77 30.7,-29.3 30.7,-50.23 -1.4,-20.93 -13.95,-40.46 -32.09,-50.22z"/>
+                <path fill="#34A853" d="M199.42 273.45l129.85 -128.35 -241.37 -136.73c-8.37,-5.58 -19.54,-8.37 -30.7,-8.37 -26.5,0 -50.22,18.14 -55.8,41.86 0,0 0,0 0,0l198.02 231.59z"/>
+                <path fill="#4285F4" d="M1.39 41.86c-1.39,4.18 -1.39,9.77 -1.39,15.34l0 397.64c0,5.57 0,9.76 1.4,15.34l216.27 -214.86 -216.28 -213.46z"/>
                </g>
               </svg>
-              Get it on Play Store
+              <span>Get it on Google Play</span>
             </a>
           </div>
         </div>
 
-        <!-- Feature Graphic -->
+        <!-- Feature Graphic Showcase -->
         <div
-          class="reveal bento-card mb-40 group"
+          class="reveal bento-card mb-32 group border-emerald-500/20 relative overflow-hidden"
         >
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none z-10"></div>
           <img
-            src="img/google_play_feature_graphic_1024x500.jpg"
-            class="w-full h-auto opacity-95 group-hover:scale-[1.02] transition-all duration-[1.5s] ease-out"
-            alt="Money Tracker App Feature Graphic"
+            src="img/google_play_feature_graphic_1024x500.png"
+            class="w-full h-auto opacity-95 group-hover:scale-[1.015] transition-all duration-700 ease-out"
+            alt="Money Tracker App Official Google Play Feature Graphic"
           />
         </div>
 
-        <!-- Why Money Tracker -->
-        <div class="reveal mb-40 text-center">
-          <div class="tech-label text-emerald-400 mb-6">/ CORE_BENEFITS</div>
-          <h2 class="text-4xl md:text-6xl heading-bold text-white mb-16">
+        <!-- Core Pillars / Why Money Tracker? -->
+        <div class="reveal mb-36 text-center">
+          <div class="tech-label text-emerald-400 mb-4">/ CORE_PILLARS</div>
+          <h2 class="text-3xl md:text-5xl heading-bold text-white mb-6">
             Why Money Tracker?
           </h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="bento-card p-10 md:p-16 text-left">
-              <div class="skill-tag inline-block border-red-500/20 text-red-500 bg-red-500/5 mb-8">
-                NON_INTRUSIVE & PRIVATE
+          <p class="text-gray-400 text-lg max-w-2xl mx-auto mb-16 font-light">
+            Engineered with modern Android best practices to deliver speed, clarity, and total control over your personal cash flow.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- 1: Dual Entry -->
+            <div class="bento-card p-8 text-left hover:border-emerald-500/40">
+              <div class="skill-tag inline-block border-emerald-500/20 text-emerald-400 bg-emerald-500/5 mb-6 text-[9px]">
+                DUAL_ENTRY_LOGGING
               </div>
-              <h3 class="text-3xl font-black text-white mb-6 uppercase tracking-tight">100% Ad-Free</h3>
-              <p class="text-gray-400 leading-relaxed font-light text-lg">
-                Zero interruptions. No advertisements, no trackers, and no selling of your private financial data. Your records belong exclusively to you.
+              <h3 class="text-2xl font-black text-white mb-4 tracking-tight">Income & Expense Side-by-Side</h3>
+              <p class="text-gray-400 leading-relaxed font-light text-base">
+                Log income and expense records side by side in seconds. Comes pre-seeded with 12 complete categories and customizable sub-sources for precise accounting.
               </p>
             </div>
-            <div class="bento-card p-10 md:p-16 text-left border-emerald-500/10">
-              <div class="skill-tag inline-block border-emerald-500/20 text-emerald-400 bg-emerald-500/5 mb-8">
+
+            <!-- 2: Allocation Engine -->
+            <div class="bento-card p-8 text-left hover:border-emerald-500/40">
+              <div class="skill-tag inline-block border-emerald-500/20 text-emerald-400 bg-emerald-500/5 mb-6 text-[9px]">
                 SMART_FINANCIALS
               </div>
-              <h3 class="text-3xl font-black text-white mb-6 uppercase tracking-tight">Allocation Engine</h3>
-              <p class="text-gray-400 leading-relaxed font-light text-lg">
-                Automatically allocate your income into custom buckets like Saving, Investing, Giving, and Rest with real-time percentage validation.
+              <h3 class="text-2xl font-black text-white mb-4 tracking-tight">Dynamic Allocation Engine</h3>
+              <p class="text-gray-400 leading-relaxed font-light text-base">
+                Automatically partition income into custom targets: Saving, Investing, Donate, and Rest with real-time percentage validation and automatic remainder calculations.
               </p>
             </div>
-            <div class="bento-card p-10 md:p-16 text-left border-emerald-500/10">
-              <div class="skill-tag inline-block border-emerald-500/20 text-emerald-400 bg-emerald-500/5 mb-8">
-                INSTANT_CALCULATION
+
+            <!-- 3: Math Expressions -->
+            <div class="bento-card p-8 text-left hover:border-emerald-500/40">
+              <div class="skill-tag inline-block border-emerald-500/20 text-emerald-400 bg-emerald-500/5 mb-6 text-[9px]">
+                INLINE_CALCULATOR
               </div>
-              <h3 class="text-3xl font-black text-white mb-6 uppercase tracking-tight">Inline Math Input</h3>
-              <p class="text-gray-400 leading-relaxed font-light text-lg">
-                Log complex salaries effortlessly! Type math expressions like <span class="text-emerald-400 font-mono">(33+17)-10</span> directly into the salary field for instant evaluation.
+              <h3 class="text-2xl font-black text-white mb-4 tracking-tight">Built-In Math Expressions</h3>
+              <p class="text-gray-400 leading-relaxed font-light text-base">
+                Type arithmetic directly into the amount field: <span class="text-emerald-400 font-mono">1500 + 250</span>, <span class="text-emerald-400 font-mono">45000 / 12</span>, or <span class="text-emerald-400 font-mono">(200 * 3) + 50</span> with full PEDMAS order.
               </p>
             </div>
-            <div class="bento-card p-10 md:p-16 text-left">
-              <div class="skill-tag inline-block border-violet-500/20 text-violet-400 bg-violet-500/5 mb-8">
-                PREMIUM_EXPERIENCE
+
+            <!-- 4: Emergency Fund -->
+            <div class="bento-card p-8 text-left hover:border-amber-500/40">
+              <div class="skill-tag inline-block border-amber-500/20 text-amber-400 bg-amber-500/5 mb-6 text-[9px]">
+                SAFETY_NET
               </div>
-              <h3 class="text-3xl font-black text-white mb-6 uppercase tracking-tight">Jetpack Compose UI</h3>
-              <p class="text-gray-400 leading-relaxed font-light text-lg">
-                Designed natively for Android with edge-to-edge aesthetics, Montserrat typography, smooth gestures, and both sleek Dark and crisp Light themes.
+              <h3 class="text-2xl font-black text-white mb-4 tracking-tight">Emergency Fund Tracker</h3>
+              <p class="text-gray-400 leading-relaxed font-light text-base">
+                Set a target 6-month safety net goal. See exact progress of funds allocated versus emergency expenses spent with custom currency localization.
+              </p>
+            </div>
+
+            <!-- 5: Duplicate Detection -->
+            <div class="bento-card p-8 text-left hover:border-emerald-500/40">
+              <div class="skill-tag inline-block border-emerald-500/20 text-emerald-400 bg-emerald-500/5 mb-6 text-[9px]">
+                DATA_CLEANLINESS
+              </div>
+              <h3 class="text-2xl font-black text-white mb-4 tracking-tight">Duplicate Detection & Auto-Merge</h3>
+              <p class="text-gray-400 leading-relaxed font-light text-base">
+                Logged repeat income or expense rows? The app flags matching entries in amber to fold them into a single clean record, with a toggleable auto-merge setting.
+              </p>
+            </div>
+
+            <!-- 6: Guest Mode & Cloud Sync -->
+            <div class="bento-card p-8 text-left hover:border-sky-500/40">
+              <div class="skill-tag inline-block border-sky-500/20 text-sky-400 bg-sky-500/5 mb-6 text-[9px]">
+                AUTH_&_PRIVACY
+              </div>
+              <h3 class="text-2xl font-black text-white mb-4 tracking-tight">Guest Mode & Google Sign-In</h3>
+              <p class="text-gray-400 leading-relaxed font-light text-base">
+                Start tracking immediately in anonymous guest mode with zero friction. Upgrade anytime to Google Sign-In via Credential Manager with seamless data migration.
               </p>
             </div>
           </div>
         </div>
 
-        <!-- Screenshots Showcase -->
-        <div class="reveal mb-40">
-          <div class="flex flex-col items-center mb-20 gap-8">
-            <div class="tech-label text-emerald-500">/ VISUAL_INTERFACE</div>
-            <h2 class="text-4xl md:text-7xl heading-bold text-white text-center">
-              A Beautiful View
+        <!-- Visual Interface Showcase (Interactive Dual-View Gallery) -->
+        <div class="reveal mb-36" id="showcase-section">
+          <div class="flex flex-col items-center mb-16 gap-6 text-center">
+            <div class="tech-label text-emerald-400">/ VISUAL_INTERFACE</div>
+            <h2 class="text-3xl md:text-6xl heading-bold text-white">
+              Designed for Clarity
             </h2>
+            <p class="text-gray-400 text-base md:text-lg max-w-xl font-light">
+              Explore the native Emerald Dark UI built with Jetpack Compose. Click any screen to view in full resolution.
+            </p>
+
+            <!-- Interactive Tab Toggle -->
             <div
-              class="bento-card p-1.5 flex items-center gap-2 relative rounded-full"
+              class="bento-card p-1.5 flex items-center relative rounded-full border-white/10 mt-4 max-w-md w-full"
             >
               <div
                 id="toggle-indicator"
-                class="absolute inset-y-1.5 w-[calc(50%-6px)] bg-white/10 border border-white/20 rounded-full transition-all duration-300 left-1.5"
+                class="absolute inset-y-1.5 w-[calc(50%-6px)] bg-emerald-500/20 border border-emerald-500/40 rounded-full transition-transform duration-300 left-1.5"
               ></div>
               <button
-                id="dark-mode-btn"
-                class="relative px-8 py-3 rounded-full font-bold text-[10px] font-mono tracking-[0.2em] transition-colors text-white"
+                id="screens-tab-btn"
+                class="relative w-1/2 py-3 rounded-full font-bold text-[10px] font-mono tracking-[0.2em] transition-colors text-white text-center focus:outline-none"
               >
-                DARK_MODE
+                CORE_SCREENS (8)
               </button>
               <button
-                id="light-mode-btn"
-                class="relative px-8 py-3 rounded-full font-bold text-[10px] font-mono tracking-[0.2em] transition-colors text-gray-500 hover:text-white"
+                id="onboarding-tab-btn"
+                class="relative w-1/2 py-3 rounded-full font-bold text-[10px] font-mono tracking-[0.2em] transition-colors text-gray-500 hover:text-white text-center focus:outline-none"
               >
-                LIGHT_MODE
+                ONBOARDING_TOUR (5)
               </button>
             </div>
           </div>
 
-          <!-- 8 App Screenshots Grid -->
+          <!-- View 1: 8 Core Dark App Screenshots Grid -->
           <div
-            class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-8 gap-4 screenshot-grid"
+            id="screens-grid"
+            class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-8 gap-4 transition-all duration-300"
           >
-            <!-- 1: Login & Welcome -->
-            <div class="flex flex-col gap-3">
-              <div class="bento-card group aspect-[9/19]">
+            <!-- 1: Auth & Guest Mode -->
+            <div class="flex flex-col gap-2.5 screenshot-card group" data-caption="01: Sign-In & Instant Guest Mode – Google Credential Manager or frictionless offline tracking">
+              <div class="aspect-[9/19] rounded-2xl overflow-hidden bg-black/40">
                 <img
-                  src="img/money-tracker-app-dark-ss (1).jpg"
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 screenshot-img"
-                  alt="Welcome & Google Sign-In"
+                  src="img/money-tracker-app-dark (1).jpeg"
+                  class="w-full h-full object-cover screenshot-img"
+                  alt="Sign-In & Guest Mode"
                   loading="lazy"
                 />
               </div>
-              <span class="tech-label text-center text-[9px] text-gray-400">01_AUTH</span>
+              <div class="px-1 text-center">
+                <span class="tech-label text-[9px] text-emerald-400 block font-bold">01_AUTH</span>
+                <span class="text-[11px] text-gray-400 truncate block mt-0.5">Guest & Google</span>
+              </div>
             </div>
 
             <!-- 2: Dashboard -->
-            <div class="flex flex-col gap-3">
-              <div class="bento-card group aspect-[9/19]">
+            <div class="flex flex-col gap-2.5 screenshot-card group" data-caption="02: Interactive Dashboard – Real-time Net Balance, annual earnings, and allocation cards">
+              <div class="aspect-[9/19] rounded-2xl overflow-hidden bg-black/40">
                 <img
-                  src="img/money-tracker-app-dark-ss (2).jpg"
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 screenshot-img"
-                  alt="Interactive Dashboard"
+                  src="img/money-tracker-app-dark (2).jpeg"
+                  class="w-full h-full object-cover screenshot-img"
+                  alt="Interactive Dashboard & Net Balance"
                   loading="lazy"
                 />
               </div>
-              <span class="tech-label text-center text-[9px] text-gray-400">02_DASHBOARD</span>
+              <div class="px-1 text-center">
+                <span class="tech-label text-[9px] text-emerald-400 block font-bold">02_DASHBOARD</span>
+                <span class="text-[11px] text-gray-400 truncate block mt-0.5">Net Balance</span>
+              </div>
             </div>
 
-            <!-- 3: Add Entry -->
-            <div class="flex flex-col gap-3">
-              <div class="bento-card group aspect-[9/19]">
+            <!-- 3: Add Entry with Math -->
+            <div class="flex flex-col gap-2.5 screenshot-card group" data-caption="03: Add Entry Sheet – Dual Income/Expense toggle with built-in PEDMAS math expression parser">
+              <div class="aspect-[9/19] rounded-2xl overflow-hidden bg-black/40">
                 <img
-                  src="img/money-tracker-app-dark-ss (3).jpg"
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 screenshot-img"
-                  alt="Smart Add Entry with Math"
+                  src="img/money-tracker-app-dark (3).jpeg"
+                  class="w-full h-full object-cover screenshot-img"
+                  alt="Add Entry with Inline Math Calculator"
                   loading="lazy"
                 />
               </div>
-              <span class="tech-label text-center text-[9px] text-gray-400">03_ADD_ENTRY</span>
+              <div class="px-1 text-center">
+                <span class="tech-label text-[9px] text-emerald-400 block font-bold">03_ADD_ENTRY</span>
+                <span class="text-[11px] text-gray-400 truncate block mt-0.5">Inline Math Calc</span>
+              </div>
             </div>
 
-            <!-- 4: Entries History -->
-            <div class="flex flex-col gap-3">
-              <div class="bento-card group aspect-[9/19]">
+            <!-- 4: Statistics & Emergency Fund -->
+            <div class="flex flex-col gap-2.5 screenshot-card group" data-caption="04: All-Time Statistics – Multi-year earnings, emergency fund tracker, and spending trends">
+              <div class="aspect-[9/19] rounded-2xl overflow-hidden bg-black/40">
                 <img
-                  src="img/money-tracker-app-dark-ss (4).jpg"
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 screenshot-img"
-                  alt="Income Entries History"
+                  src="img/money-tracker-app-dark (4).jpeg"
+                  class="w-full h-full object-cover screenshot-img"
+                  alt="All-Time Statistics & Emergency Fund"
                   loading="lazy"
                 />
               </div>
-              <span class="tech-label text-center text-[9px] text-gray-400">04_ENTRIES</span>
+              <div class="px-1 text-center">
+                <span class="tech-label text-[9px] text-emerald-400 block font-bold">04_STATISTICS</span>
+                <span class="text-[11px] text-gray-400 truncate block mt-0.5">Emergency Fund</span>
+              </div>
             </div>
 
-            <!-- 5: Lifetime Statistics -->
-            <div class="flex flex-col gap-3">
-              <div class="bento-card group aspect-[9/19]">
+            <!-- 5: Entries & Auto-Merge -->
+            <div class="flex flex-col gap-2.5 screenshot-card group" data-caption="05: Entries History – Search, type filtering, duplicate amber highlights, and auto-merge">
+              <div class="aspect-[9/19] rounded-2xl overflow-hidden bg-black/40">
                 <img
-                  src="img/money-tracker-app-dark-ss (5).jpg"
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 screenshot-img"
-                  alt="Lifetime Statistics"
+                  src="img/money-tracker-app-dark (5).jpeg"
+                  class="w-full h-full object-cover screenshot-img"
+                  alt="Entries History with Duplicate Detection"
                   loading="lazy"
                 />
               </div>
-              <span class="tech-label text-center text-[9px] text-gray-400">05_STATISTICS</span>
+              <div class="px-1 text-center">
+                <span class="tech-label text-[9px] text-emerald-400 block font-bold">05_ENTRIES</span>
+                <span class="text-[11px] text-gray-400 truncate block mt-0.5">History & Filters</span>
+              </div>
             </div>
 
-            <!-- 6: App Settings -->
-            <div class="flex flex-col gap-3">
-              <div class="bento-card group aspect-[9/19]">
+            <!-- 6: Settings & Custom Taxonomy -->
+            <div class="flex flex-col gap-2.5 screenshot-card group" data-caption="06: App Settings – Currency selector, theme override, and drag-and-drop category management">
+              <div class="aspect-[9/19] rounded-2xl overflow-hidden bg-black/40">
                 <img
-                  src="img/money-tracker-app-dark-ss (6).jpg"
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 screenshot-img"
-                  alt="App Settings & Currency"
+                  src="img/money-tracker-app-dark (6).jpeg"
+                  class="w-full h-full object-cover screenshot-img"
+                  alt="Settings & Multi-Currency Preferences"
                   loading="lazy"
                 />
               </div>
-              <span class="tech-label text-center text-[9px] text-gray-400">06_SETTINGS</span>
+              <div class="px-1 text-center">
+                <span class="tech-label text-[9px] text-emerald-400 block font-bold">06_SETTINGS</span>
+                <span class="text-[11px] text-gray-400 truncate block mt-0.5">Currency & Sources</span>
+              </div>
             </div>
 
-            <!-- 7: Allocation Drilldown -->
-            <div class="flex flex-col gap-3">
-              <div class="bento-card group aspect-[9/19]">
+            <!-- 7: Account & Ad-Free Lifetime -->
+            <div class="flex flex-col gap-2.5 screenshot-card group" data-caption="07: Account & Support – Cloud backup status, one-time Ad-Free Lifetime upgrade, developer apps">
+              <div class="aspect-[9/19] rounded-2xl overflow-hidden bg-black/40">
                 <img
-                  src="img/money-tracker-app-dark-ss (7).jpg"
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 screenshot-img"
-                  alt="12-Month Allocation Breakdown"
+                  src="img/money-tracker-app-dark (7).jpeg"
+                  class="w-full h-full object-cover screenshot-img"
+                  alt="Account Support & Ad-Free Lifetime"
                   loading="lazy"
                 />
               </div>
-              <span class="tech-label text-center text-[9px] text-gray-400">07_BREAKDOWN</span>
+              <div class="px-1 text-center">
+                <span class="tech-label text-[9px] text-emerald-400 block font-bold">07_SUPPORT</span>
+                <span class="text-[11px] text-gray-400 truncate block mt-0.5">Ad-Free Upgrade</span>
+              </div>
             </div>
 
-            <!-- 8: Overview & Sources -->
-            <div class="flex flex-col gap-3">
-              <div class="bento-card group aspect-[9/19]">
+            <!-- 8: 12-Month Bar Chart Analytics -->
+            <div class="flex flex-col gap-2.5 screenshot-card group" data-caption="08: Monthly Overview Chart – 12-month visual timeline auto-highlighting Best Month and Low Month">
+              <div class="aspect-[9/19] rounded-2xl overflow-hidden bg-black/40">
                 <img
-                  src="img/money-tracker-app-dark-ss (8).jpg"
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 screenshot-img"
-                  alt="Sources & Monthly Overview"
+                  src="img/money-tracker-app-dark (8).jpg"
+                  class="w-full h-full object-cover screenshot-img"
+                  alt="12-Month Bar Chart & Monthly Overview"
                   loading="lazy"
                 />
               </div>
-              <span class="tech-label text-center text-[9px] text-gray-400">08_ANALYTICS</span>
+              <div class="px-1 text-center">
+                <span class="tech-label text-[9px] text-emerald-400 block font-bold">08_ANALYTICS</span>
+                <span class="text-[11px] text-gray-400 truncate block mt-0.5">12-Month Chart</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- View 2: 5 Guided Onboarding Slides Grid (Hidden by default) -->
+          <div
+            id="onboarding-grid"
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 hidden transition-all duration-300"
+          >
+            <!-- Onboarding 1: Track -->
+            <div class="flex flex-col gap-3 screenshot-card group" data-caption="Slide 1: TRACK – 'Track every coin, effortlessly. Log income and expenses in seconds with date and source.'">
+              <div class="aspect-[9/19] rounded-2xl overflow-hidden bg-black/40">
+                <img
+                  src="img/money-tracker-app-onboarding (1).jpeg"
+                  class="w-full h-full object-cover screenshot-img"
+                  alt="Onboarding Slide 1 - Track"
+                  loading="lazy"
+                />
+              </div>
+              <div class="px-2 text-center">
+                <span class="tech-label text-[9px] text-emerald-400 block font-bold">01_TRACK</span>
+                <h4 class="text-xs font-bold text-white mt-1">Effortless Logging</h4>
+                <p class="text-[11px] text-gray-400 mt-0.5">Day • Month • Year logging</p>
+              </div>
+            </div>
+
+            <!-- Onboarding 2: Tidy Up -->
+            <div class="flex flex-col gap-3 screenshot-card group" data-caption="Slide 2: TIDY UP – 'Merge the repeats. Flag duplicate rows in amber to fold into a single clean entry.'">
+              <div class="aspect-[9/19] rounded-2xl overflow-hidden bg-black/40">
+                <img
+                  src="img/money-tracker-app-onboarding (2).jpeg"
+                  class="w-full h-full object-cover screenshot-img"
+                  alt="Onboarding Slide 2 - Tidy Up"
+                  loading="lazy"
+                />
+              </div>
+              <div class="px-2 text-center">
+                <span class="tech-label text-[9px] text-amber-400 block font-bold">02_TIDY_UP</span>
+                <h4 class="text-xs font-bold text-white mt-1">Merge Repeats</h4>
+                <p class="text-[11px] text-gray-400 mt-0.5">Zero record clutter</p>
+              </div>
+            </div>
+
+            <!-- Onboarding 3: Allocate -->
+            <div class="flex flex-col gap-3 screenshot-card group" data-caption="Slide 3: ALLOCATE – 'Split your money by rule. Saving, Investing, Donate, and Rest auto-calculated.'">
+              <div class="aspect-[9/19] rounded-2xl overflow-hidden bg-black/40">
+                <img
+                  src="img/money-tracker-app-onboarding (3).jpeg"
+                  class="w-full h-full object-cover screenshot-img"
+                  alt="Onboarding Slide 3 - Allocate"
+                  loading="lazy"
+                />
+              </div>
+              <div class="px-2 text-center">
+                <span class="tech-label text-[9px] text-sky-400 block font-bold">03_ALLOCATE</span>
+                <h4 class="text-xs font-bold text-white mt-1">Rule-Based Split</h4>
+                <p class="text-[11px] text-gray-400 mt-0.5">Custom % & auto remainder</p>
+              </div>
+            </div>
+
+            <!-- Onboarding 4: Understand -->
+            <div class="flex flex-col gap-3 screenshot-card group" data-caption="Slide 4: UNDERSTAND – 'See where it all goes. Monthly overview charts, source breakdowns, and lifetime statistics.'">
+              <div class="aspect-[9/19] rounded-2xl overflow-hidden bg-black/40">
+                <img
+                  src="img/money-tracker-app-onboarding (4).jpeg"
+                  class="w-full h-full object-cover screenshot-img"
+                  alt="Onboarding Slide 4 - Understand"
+                  loading="lazy"
+                />
+              </div>
+              <div class="px-2 text-center">
+                <span class="tech-label text-[9px] text-amber-400 block font-bold">04_UNDERSTAND</span>
+                <h4 class="text-xs font-bold text-white mt-1">Visual Insights</h4>
+                <p class="text-[11px] text-gray-400 mt-0.5">Interactive bar charts</p>
+              </div>
+            </div>
+
+            <!-- Onboarding 5: Control -->
+            <div class="flex flex-col gap-3 screenshot-card group" data-caption="Slide 5: CONTROL – 'Organize it your way. Create main and sub sources, rename categories, and switch currency.'">
+              <div class="aspect-[9/19] rounded-2xl overflow-hidden bg-black/40">
+                <img
+                  src="img/money-tracker-app-onboarding (5).jpeg"
+                  class="w-full h-full object-cover screenshot-img"
+                  alt="Onboarding Slide 5 - Control"
+                  loading="lazy"
+                />
+              </div>
+              <div class="px-2 text-center">
+                <span class="tech-label text-[9px] text-purple-400 block font-bold">05_CONTROL</span>
+                <h4 class="text-xs font-bold text-white mt-1">Total Flexibility</h4>
+                <p class="text-[11px] text-gray-400 mt-0.5">Tailored categories & currency</p>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Key Features Grid -->
-        <div class="reveal mb-40">
-          <div class="text-center mb-20">
-            <div class="tech-label text-emerald-400 mb-6">/ SYSTEM_CAPABILITIES</div>
-            <h2 class="text-4xl md:text-6xl heading-bold text-white">
-              Key Features
+        <!-- Key Features Deep Dive Grid -->
+        <div class="reveal mb-36">
+          <div class="text-center mb-16">
+            <div class="tech-label text-emerald-400 mb-4">/ SYSTEM_CAPABILITIES</div>
+            <h2 class="text-3xl md:text-5xl heading-bold text-white">
+              Feature Deep Dive
             </h2>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Feature 1 -->
-            <div class="bento-card p-10 hover:border-emerald-500/30">
-              <h3 class="text-2xl font-black text-emerald-500 mb-6 flex items-center gap-4">
-                <span class="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center text-sm">01</span>
-                Dynamic Allocation Engine
-              </h3>
-              <ul class="text-gray-400 space-y-4 font-light text-lg list-none">
-                <li class="flex items-start gap-3">
-                  <span class="text-emerald-500 mt-1.5">▹</span>
-                  <span><strong class="text-white">Smart Split:</strong> Auto-distributes income into Saving (30%), Investing (3%), Donate (1%), and Rest (66%).</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="text-emerald-500 mt-1.5">▹</span>
-                  <span><strong class="text-white">Custom Percentages:</strong> Fine-tune your percentages and labels in Settings with real-time total validation.</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="text-emerald-500 mt-1.5">▹</span>
-                  <span><strong class="text-white">Monthly Drilldown:</strong> Tap any category to inspect a month-by-month history of how much was saved or invested.</span>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Feature 2 -->
-            <div class="bento-card p-10 hover:border-emerald-500/30">
+            <!-- Feature 1: Allocation Engine & Emergency Fund -->
+            <div class="bento-card p-8 md:p-10 hover:border-emerald-500/40">
               <h3 class="text-2xl font-black text-emerald-400 mb-6 flex items-center gap-4">
-                <span class="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center text-sm">02</span>
-                Interactive Monthly Bar Chart
+                <span class="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center text-sm font-mono">01</span>
+                Dynamic Allocation & Emergency Fund
               </h3>
-              <ul class="text-gray-400 space-y-4 font-light text-lg list-none">
+              <ul class="text-gray-400 space-y-4 font-light text-base md:text-lg list-none">
                 <li class="flex items-start gap-3">
                   <span class="text-emerald-500 mt-1.5">▹</span>
-                  <span><strong class="text-white">12-Month Timeline:</strong> Comprehensive calendar view from January to December with summed income per month.</span>
+                  <span><strong class="text-white">Smart Split:</strong> Automatically partitions income into Saving, Investing, Donate, and Rest (`100 − total`).</span>
                 </li>
                 <li class="flex items-start gap-3">
                   <span class="text-emerald-500 mt-1.5">▹</span>
-                  <span><strong class="text-white">Peak Badges:</strong> Automatically identifies your <span class="text-emerald-400">Best Month</span> and lowest earning month.</span>
+                  <span><strong class="text-white">Safety Net Target:</strong> Dedicated Emergency Fund card tracks goal progress, distinguishing allocated savings from spent funds.</span>
                 </li>
                 <li class="flex items-start gap-3">
                   <span class="text-emerald-500 mt-1.5">▹</span>
-                  <span><strong class="text-white">Tap to Inspect:</strong> Tap any bar to see precise figures, monthly totals, and annual averages.</span>
+                  <span><strong class="text-white">Live Validation:</strong> Real-time percentage constraints in Settings prevent over-allocation above 100%.</span>
                 </li>
               </ul>
             </div>
 
-            <!-- Feature 3 -->
-            <div class="bento-card p-10 hover:border-emerald-500/30">
-              <h3 class="text-2xl font-black text-white mb-6 flex items-center gap-4 uppercase tracking-tight">
-                <span class="text-emerald-500 font-mono text-xl">03</span> Multi-Tier Income Sources
+            <!-- Feature 2: Interactive Bar Chart -->
+            <div class="bento-card p-8 md:p-10 hover:border-emerald-500/40">
+              <h3 class="text-2xl font-black text-emerald-400 mb-6 flex items-center gap-4">
+                <span class="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center text-sm font-mono">02</span>
+                12-Month Interactive Bar Chart
               </h3>
-              <p class="text-gray-400 text-lg font-light leading-relaxed mb-4">
-                Categorize income into primary sources like <strong class="text-white">Job, Business, Freelancing, Govt Benefits, Tax Return, or Gift</strong>, with custom sub-sources (e.g., Upwork, Fiverr, Stripe, Direct).
+              <ul class="text-gray-400 space-y-4 font-light text-base md:text-lg list-none">
+                <li class="flex items-start gap-3">
+                  <span class="text-emerald-500 mt-1.5">▹</span>
+                  <span><strong class="text-white">Full Year Overview:</strong> High-performance canvas chart merging multiple entries per month from Jan to Dec.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-emerald-500 mt-1.5">▹</span>
+                  <span><strong class="text-white">Peak Highlighting:</strong> Automatically detects your <span class="text-emerald-400 font-medium">Best Month</span> and lowest earning month.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-emerald-500 mt-1.5">▹</span>
+                  <span><strong class="text-white">Tap to Drilldown:</strong> Tap any monthly bar to open a detailed breakdown sheet with monthly totals and category shifts.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Feature 3: Expense Taxonomy -->
+            <div class="bento-card p-8 md:p-10 hover:border-emerald-500/40">
+              <h3 class="text-2xl font-black text-white mb-6 flex items-center gap-4">
+                <span class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-sm font-mono">03</span>
+                12 Pre-Seeded Smart Categories
+              </h3>
+              <p class="text-gray-400 text-base md:text-lg font-light leading-relaxed mb-4">
+                Comprehensive taxonomy built right in: <strong class="text-white">Groceries & Food, Bills, Transportation, Healthcare, Education, Shopping, Family, Travel, Dining, Donations, Debt Payments, and Other Expenses</strong>.
               </p>
-              <p class="text-gray-400 text-lg font-light leading-relaxed">
-                Add new sub-sources on the fly directly from the entry sheet without leaving your workflow!
+              <p class="text-gray-400 text-base md:text-lg font-light leading-relaxed">
+                Add, rename, or drag to reorder categories anytime. Create new main and sub-sources inline right from the entry sheet!
               </p>
             </div>
 
-            <!-- Feature 4 -->
-            <div class="bento-card p-10 hover:border-emerald-500/30">
-              <h3 class="text-2xl font-black text-white mb-6 flex items-center gap-4 uppercase tracking-tight">
-                <span class="text-emerald-400 font-mono text-xl">04</span> Lifetime Stats & Offline Sync
+            <!-- Feature 4: Cloud Sync & In-App Updates -->
+            <div class="bento-card p-8 md:p-10 hover:border-emerald-500/40">
+              <h3 class="text-2xl font-black text-white mb-6 flex items-center gap-4">
+                <span class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-sm font-mono">04</span>
+                Offline Persistence & In-App Updates
               </h3>
-              <p class="text-gray-400 text-lg font-light leading-relaxed mb-4">
-                Inspect your multi-year financial journey with lifetime income, cumulative savings, and average annual earnings.
+              <p class="text-gray-400 text-base md:text-lg font-light leading-relaxed mb-4">
+                Backed by <strong class="text-white">Firebase Cloud Firestore</strong> offline cache. Log records without network access, and sync seamlessly once reconnected.
               </p>
-              <p class="text-gray-400 text-lg font-light leading-relaxed">
-                Powered by <strong class="text-white">Firebase Cloud Firestore</strong> with offline persistence: log income anywhere without internet, and sync securely when back online.
+              <p class="text-gray-400 text-base md:text-lg font-light leading-relaxed">
+                Intelligent 3-tier update check: <strong class="text-white">Google Play In-App Updates API → GitHub Releases → Firestore fallback</strong> with customizable release notes.
               </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Engineering Specs Bento -->
+        <div class="reveal bento-card p-10 md:p-14 mb-36">
+          <div class="text-center mb-12">
+            <div class="tech-label text-emerald-400 mb-3">/ ARCHITECTURE</div>
+            <h2 class="text-2xl md:text-4xl heading-bold text-white">
+              Built with Modern Technologies
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-center">
+            <div class="p-5 bg-white/5 rounded-2xl border border-white/5">
+              <span class="tech-label text-emerald-400 block mb-2">LANGUAGE</span>
+              <span class="font-bold text-white text-lg">Kotlin 2.x</span>
+            </div>
+            <div class="p-5 bg-white/5 rounded-2xl border border-white/5">
+              <span class="tech-label text-emerald-400 block mb-2">TOOLKIT</span>
+              <span class="font-bold text-white text-lg">Jetpack Compose</span>
+            </div>
+            <div class="p-5 bg-white/5 rounded-2xl border border-white/5">
+              <span class="tech-label text-emerald-400 block mb-2">BACKEND</span>
+              <span class="font-bold text-white text-lg">Cloud Firestore</span>
+            </div>
+            <div class="p-5 bg-white/5 rounded-2xl border border-white/5">
+              <span class="tech-label text-emerald-400 block mb-2">AUTH</span>
+              <span class="font-bold text-white text-lg">Credential Manager</span>
+            </div>
+            <div class="p-5 bg-white/5 rounded-2xl border border-white/5">
+              <span class="tech-label text-emerald-400 block mb-2">MONETIZATION</span>
+              <span class="font-bold text-white text-lg">Play Billing 9.x</span>
+            </div>
+            <div class="p-5 bg-white/5 rounded-2xl border border-white/5">
+              <span class="tech-label text-emerald-400 block mb-2">PREFERENCES</span>
+              <span class="font-bold text-white text-lg">Jetpack DataStore</span>
+            </div>
+            <div class="p-5 bg-white/5 rounded-2xl border border-white/5">
+              <span class="tech-label text-emerald-400 block mb-2">TARGET SDK</span>
+              <span class="font-bold text-white text-lg">Android 16 (API 36)</span>
+            </div>
+            <div class="p-5 bg-white/5 rounded-2xl border border-white/5">
+              <span class="tech-label text-emerald-400 block mb-2">TYPOGRAPHY</span>
+              <span class="font-bold text-white text-lg">Montserrat</span>
             </div>
           </div>
         </div>
 
         <!-- Support Our Mission -->
         <div
-          class="reveal bento-card p-12 md:p-20 mb-40 relative overflow-hidden"
+          class="reveal bento-card p-10 md:p-16 mb-32 relative overflow-hidden"
         >
           <div class="absolute top-0 right-0 w-64 h-64 bg-emerald-500/5 blur-[100px] rounded-full"></div>
           <div class="absolute bottom-0 left-0 w-64 h-64 bg-emerald-500/5 blur-[100px] rounded-full"></div>
           
-          <div class="text-center mb-16 relative z-10">
-            <div class="tech-label text-emerald-500 mb-6">/ COMMUNITY_SUPPORT</div>
-            <h2 class="text-4xl md:text-6xl heading-bold text-white mb-6">
+          <div class="text-center mb-14 relative z-10">
+            <div class="tech-label text-emerald-500 mb-4">/ COMMUNITY_SUPPORT</div>
+            <h2 class="text-3xl md:text-5xl heading-bold text-white mb-6">
               Support Our Mission
             </h2>
-            <p class="text-gray-400 text-xl font-light leading-relaxed max-w-2xl mx-auto">
-              Money Tracker App is committed to remaining 100% ad-free and privacy-respecting. If this app brings value to your financial life, you can support its ongoing maintenance and development.
+            <p class="text-gray-400 text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto">
+              Money Tracker App is dedicated to empowering everyday people with clean, private financial management. If this app brings value to your financial journey, you can support its maintenance and server infrastructure.
             </p>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
             <!-- Stripe -->
-            <div class="bento-card p-10 flex flex-col items-center text-center group hover:border-[#635BFF]/30 transition-all">
-              <div class="w-16 h-16 bg-[#635BFF]/10 rounded-2xl flex items-center justify-center mb-8 text-[#635BFF]">
+            <div class="bento-card p-8 md:p-10 flex flex-col items-center text-center group hover:border-[#635BFF]/40 transition-all">
+              <div class="w-16 h-16 bg-[#635BFF]/10 rounded-2xl flex items-center justify-center mb-6 text-[#635BFF]">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
               </div>
-              <h3 class="text-2xl font-black text-white mb-4 uppercase tracking-tight">International</h3>
-              <p class="text-gray-400 font-light mb-10 text-lg">Fast and secure international contributions via Stripe.</p>
-              <a href="https://donate.stripe.com/3cI8wO6bWcqd7F46az8AE01" target="_blank" rel="noreferrer" class="cta-primary w-full justify-center !bg-[#635BFF] !text-white hover:!bg-[#524BFF]">
+              <h3 class="text-2xl font-black text-white mb-3 uppercase tracking-tight">International</h3>
+              <p class="text-gray-400 font-light mb-8 text-base">Fast, secure international contributions via Stripe checkout.</p>
+              <a href="https://donate.stripe.com/3cI8wO6bWcqd7F46az8AE01" target="_blank" rel="noreferrer" class="cta-primary w-full justify-center !bg-[#635BFF] !text-white hover:!bg-[#524BFF] border-transparent">
                 Donate via Stripe
               </a>
             </div>
 
             <!-- bKash -->
-            <div class="bento-card p-10 flex flex-col items-center text-center group hover:border-[#E2136E]/30 transition-all">
-              <div class="w-16 h-16 bg-[#E2136E]/10 rounded-2xl flex items-center justify-center mb-8 text-[#E2136E]">
+            <div class="bento-card p-8 md:p-10 flex flex-col items-center text-center group hover:border-[#E2136E]/40 transition-all">
+              <div class="w-16 h-16 bg-[#E2136E]/10 rounded-2xl flex items-center justify-center mb-6 text-[#E2136E]">
                 <span class="font-bold text-3xl">b</span>
               </div>
-              <h3 class="text-2xl font-black text-white mb-4 uppercase tracking-tight">Bangladesh</h3>
-              <p class="text-gray-400 font-light mb-8 text-lg">Send voluntary support via bKash Send Money to:</p>
-              <div class="w-full bg-white/5 border border-[#E2136E]/20 rounded-2xl p-6 flex flex-col items-center justify-center mb-10">
-                <span class="text-3xl font-black text-[#E2136E] tracking-[0.2em] mb-2">01773615582</span>
+              <h3 class="text-2xl font-black text-white mb-3 uppercase tracking-tight">Bangladesh</h3>
+              <p class="text-gray-400 font-light mb-6 text-base">Send voluntary support via bKash Send Money to:</p>
+              <div class="w-full bg-white/5 border border-[#E2136E]/20 rounded-2xl p-5 flex flex-col items-center justify-center mb-8">
+                <span class="text-2xl md:text-3xl font-black text-[#E2136E] tracking-[0.2em] mb-1">01773615582</span>
                 <span class="tech-label !text-[9px]">Personal Account</span>
               </div>
             </div>
@@ -521,24 +772,55 @@
         </div>
 
         <!-- Legal Links -->
-        <div class="reveal bento-card p-10 flex flex-col md:flex-row items-center justify-center gap-10">
-          <a href="privacy-policy.html" class="tech-label hover:text-emerald-500 transition-colors group flex items-center gap-3">
+        <div class="reveal bento-card p-8 flex flex-col md:flex-row items-center justify-center gap-8 mb-12">
+          <a href="privacy-policy.html" class="tech-label hover:text-emerald-400 transition-colors group flex items-center gap-3">
             <span>Privacy_Policy</span>
             <span class="group-hover:translate-x-1 transition-transform">→</span>
           </a>
           <div class="hidden md:block w-[1px] h-4 bg-white/10"></div>
-          <a href="data-deletion.html" class="tech-label hover:text-red-500 transition-colors group flex items-center gap-3">
+          <a href="data-deletion.html" class="tech-label hover:text-red-400 transition-colors group flex items-center gap-3">
             <span>Data_Deletion_Request</span>
+            <span class="group-hover:translate-x-1 transition-transform">→</span>
+          </a>
+          <div class="hidden md:block w-[1px] h-4 bg-white/10"></div>
+          <a href="https://github.com/sahedalomsumit/money-tracker-app" target="_blank" rel="noopener noreferrer" class="tech-label hover:text-white transition-colors group flex items-center gap-3">
+            <span>Source_Code_GitHub</span>
             <span class="group-hover:translate-x-1 transition-transform">→</span>
           </a>
         </div>
       </section>
     </main>
 
+    <!-- Lightbox Modal for Full-Size Screenshot View -->
+    <div id="screenshot-lightbox" role="dialog" aria-modal="true" aria-label="Screenshot Preview">
+      <div id="screenshot-lightbox-backdrop" class="absolute inset-0"></div>
+      <div class="relative z-10 flex flex-col items-center max-w-4xl max-h-[90vh]">
+        <button
+          id="screenshot-lightbox-close"
+          class="absolute -top-12 right-0 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 rounded-full w-10 h-10 flex items-center justify-center transition-colors focus:outline-none"
+          aria-label="Close Preview"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+        <img id="screenshot-lightbox-img" src="" alt="Screenshot Preview" class="object-contain" />
+        <p id="screenshot-lightbox-caption" class="tech-label text-emerald-400 text-center mt-4 px-4 py-1.5 bg-black/60 rounded-full border border-white/10"></p>
+      </div>
+    </div>
+
     <!-- Footer -->
     <footer class="py-12 border-t border-white/5 bg-[#050505] relative overflow-hidden">
       <div class="max-w-7xl mx-auto px-6">
-        <p class="font-mono text-[9px] uppercase tracking-widest text-center md:text-left flex flex-wrap items-center justify-center md:justify-start gap-x-2 gap-y-1" style="color: var(--text-muted);"><span>© <span id="year">2026</span> Sahed Alom Sumit //</span><a href="https://sahedalomsumit.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 hover:opacity-80 transition-opacity" style="text-decoration: none;"><span class="normal-case tracking-normal">Built with</span><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="#ef4444" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="transform-origin: center center; flex-shrink: 0; animation: 1.2s ease-in-out 0s infinite normal none running pulseHeart;"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg><span class="normal-case tracking-normal">by</span><span class="normal-case tracking-normal" style="color: rgb(255, 135, 25); font-weight: 700;">Sahed</span></a></p>
+        <p class="font-mono text-[9px] uppercase tracking-widest text-center md:text-left flex flex-wrap items-center justify-center md:justify-start gap-x-2 gap-y-1" style="color: var(--text-muted);">
+          <span>© <span id="year">2026</span> Sahed Alom Sumit //</span>
+          <a href="https://sahedalomsumit.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 hover:opacity-80 transition-opacity" style="text-decoration: none;">
+            <span class="normal-case tracking-normal">Built with</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="#ef4444" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="transform-origin: center center; flex-shrink: 0; animation: 1.2s ease-in-out 0s infinite normal none running pulseHeart;">
+              <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
+            </svg>
+            <span class="normal-case tracking-normal">by</span>
+            <span class="normal-case tracking-normal" style="color: rgb(255, 135, 25); font-weight: 700;">Sahed</span>
+          </a>
+        </p>
       </div>
     </footer>
 
@@ -549,4 +831,3 @@
     </script>
   </body>
 </html>
-

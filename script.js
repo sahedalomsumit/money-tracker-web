@@ -161,63 +161,99 @@ revealElements.forEach(el => {
   );
 });
 
-// Theme Switcher for Screenshots
-const darkBtn = document.getElementById('dark-mode-btn');
-const lightBtn = document.getElementById('light-mode-btn');
+// Showcase Tab Switcher (Core Screens vs Guided Onboarding)
+const screensTabBtn = document.getElementById('screens-tab-btn');
+const onboardingTabBtn = document.getElementById('onboarding-tab-btn');
 const toggleIndicator = document.getElementById('toggle-indicator');
+const screensGrid = document.getElementById('screens-grid');
+const onboardingGrid = document.getElementById('onboarding-grid');
 
-if (darkBtn && lightBtn) {
-  const darkScreenshots = [
-    'img/money-tracker-app-dark-ss (1).jpg',
-    'img/money-tracker-app-dark-ss (2).jpg',
-    'img/money-tracker-app-dark-ss (3).jpg',
-    'img/money-tracker-app-dark-ss (4).jpg',
-    'img/money-tracker-app-dark-ss (5).jpg',
-    'img/money-tracker-app-dark-ss (6).jpg',
-    'img/money-tracker-app-dark-ss (7).jpg',
-    'img/money-tracker-app-dark-ss (8).jpg'
-  ];
+if (screensTabBtn && onboardingTabBtn && toggleIndicator && screensGrid && onboardingGrid) {
+  screensTabBtn.addEventListener('click', () => {
+    toggleIndicator.style.transform = 'translateX(0)';
+    screensTabBtn.classList.add('text-white');
+    screensTabBtn.classList.remove('text-gray-500');
+    onboardingTabBtn.classList.remove('text-white');
+    onboardingTabBtn.classList.add('text-gray-500');
 
-  const lightScreenshots = [
-    'img/money-tracker-app-light-ss (1).jpg',
-    'img/money-tracker-app-light-ss (2).jpg',
-    'img/money-tracker-app-light-ss (3).jpg',
-    'img/money-tracker-app-light-ss (4).jpg',
-    'img/money-tracker-app-light-ss (5).jpg',
-    'img/money-tracker-app-light-ss (6).jpg',
-    'img/money-tracker-app-light-ss (7).jpg',
-    'img/money-tracker-app-light-ss (8).jpg'
-  ];
-
-  darkBtn.addEventListener('click', () => {
-    toggleIndicator.classList.add('left-1');
-    toggleIndicator.classList.remove('left-[calc(50%+2px)]');
-    darkBtn.classList.add('text-white');
-    darkBtn.classList.remove('text-gray-500');
-    lightBtn.classList.remove('text-white');
-    lightBtn.classList.add('text-gray-500');
-    
-    const screenshotImages = document.querySelectorAll('.screenshot-img');
-    screenshotImages.forEach((img, i) => {
-      if (darkScreenshots[i]) {
-        img.src = darkScreenshots[i];
+    gsap.to(onboardingGrid, {
+      opacity: 0,
+      y: 10,
+      duration: 0.25,
+      ease: 'power2.in',
+      onComplete: () => {
+        onboardingGrid.classList.add('hidden');
+        screensGrid.classList.remove('hidden');
+        gsap.fromTo(screensGrid, { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 0.35, ease: 'power2.out' });
       }
     });
   });
 
-  lightBtn.addEventListener('click', () => {
-    toggleIndicator.classList.remove('left-1');
-    toggleIndicator.classList.add('left-[calc(50%+2px)]');
-    lightBtn.classList.add('text-white');
-    lightBtn.classList.remove('text-gray-500');
-    darkBtn.classList.remove('text-white');
-    darkBtn.classList.add('text-gray-500');
-    
-    const screenshotImages = document.querySelectorAll('.screenshot-img');
-    screenshotImages.forEach((img, i) => {
-      if (lightScreenshots[i]) {
-        img.src = lightScreenshots[i];
+  onboardingTabBtn.addEventListener('click', () => {
+    toggleIndicator.style.transform = 'translateX(100%)';
+    onboardingTabBtn.classList.add('text-white');
+    onboardingTabBtn.classList.remove('text-gray-500');
+    screensTabBtn.classList.remove('text-white');
+    screensTabBtn.classList.add('text-gray-500');
+
+    gsap.to(screensGrid, {
+      opacity: 0,
+      y: 10,
+      duration: 0.25,
+      ease: 'power2.in',
+      onComplete: () => {
+        screensGrid.classList.add('hidden');
+        onboardingGrid.classList.remove('hidden');
+        gsap.fromTo(onboardingGrid, { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 0.35, ease: 'power2.out' });
       }
     });
+  });
+}
+
+// Screenshot Lightbox Modal
+const lightbox = document.getElementById('screenshot-lightbox');
+const lightboxImg = document.getElementById('screenshot-lightbox-img');
+const lightboxCaption = document.getElementById('screenshot-lightbox-caption');
+const lightboxClose = document.getElementById('screenshot-lightbox-close');
+
+if (lightbox && lightboxImg) {
+  const openLightbox = (src, caption) => {
+    lightboxImg.src = src;
+    if (lightboxCaption) {
+      lightboxCaption.textContent = caption || '';
+    }
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeLightbox = () => {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+  };
+
+  document.querySelectorAll('.screenshot-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const img = card.querySelector('img');
+      const caption = card.dataset.caption || (img ? img.alt : '');
+      if (img) {
+        openLightbox(img.src, caption);
+      }
+    });
+  });
+
+  if (lightboxClose) {
+    lightboxClose.addEventListener('click', closeLightbox);
+  }
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox || e.target.id === 'screenshot-lightbox-backdrop') {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+      closeLightbox();
+    }
   });
 }
